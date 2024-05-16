@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import { randomBoolean, randomIntegerInRange } from './../utils'
 
-function Welcome({ data, ...props }) {
+function Welcome({ data, setData, ...props }) {
     const regenerateData = () => {        
         setData({...{
             kualitas_oksigen: randomIntegerInRange(30, 90),
