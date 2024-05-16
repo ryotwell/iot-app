@@ -8,7 +8,7 @@ import ArduinoSwitcher from './components/ArduinoSwitcher';
 import Welcome from './components/Welcome';
 
 function App(props) {
-    const [ data, setData ] = useState({...{
+    const [data, setData] = useState({...{
         kualitas_oksigen: 64,
         suhu_ruangan: 12,
         debit_air: 14,
@@ -25,7 +25,7 @@ function App(props) {
                 <span className='hidden bg-slate-100'></span>
 
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
-                    <Welcome {...{ data }} />
+                    <Welcome {...{ data, setData }} />
                     <Card {...{ title: 'Kualitas Oksigen' }}>
                         <Gauge {...{ value: data.kualitas_oksigen }} />
                     </Card>

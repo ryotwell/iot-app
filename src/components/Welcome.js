@@ -1,9 +1,8 @@
-import React from 'react'
 import Card from './Card'
 import { randomBoolean, randomIntegerInRange } from './../utils'
 
 function Welcome({ data, setData, ...props }) {
-    const regenerateData = () => {        
+    const regenerateData = () => {
         setData({...{
             kualitas_oksigen: randomIntegerInRange(30, 90),
             suhu_ruangan: randomIntegerInRange(0, 50),
@@ -39,7 +38,7 @@ function Welcome({ data, setData, ...props }) {
                 <button onClick={regenerateData} className='bg-blue-600 hover:bg-blue-700 active:bg-blue-700 py-2 px-4 rounded-lg text-slate-100'>
                     Generate Data
                 </button>
-            </Card>            
+            </Card>
         </>
     );
 }
