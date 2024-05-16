@@ -1,7 +1,21 @@
-import React from 'react';
-import Card from './Card';
+import React from 'react'
+import Card from './Card'
+import { randomBoolean, randomIntegerInRange } from './../utils'
 
-function Welcome({ data, regenerateData, ...props }) {
+function Welcome({ data, ...props }) {
+    const regenerateData = () => {        
+        setData({...{
+            kualitas_oksigen: randomIntegerInRange(30, 90),
+            suhu_ruangan: randomIntegerInRange(0, 50),
+            debit_air: randomIntegerInRange(10, 50),
+            arduino_swicth: randomBoolean(),
+            arduino_battery: {
+                isCharging: randomBoolean(),
+                value: randomIntegerInRange(0, 100)
+            }
+        }})
+    }
+
     return (
         <>
             <Card {...{ title: 'Dashboard', center: false, className: 'p-4 text-sm' }}>
