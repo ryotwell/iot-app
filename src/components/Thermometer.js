@@ -1,15 +1,17 @@
-import { default as Ther } from 'react-thermometer-component'
+import { default as CreateThermometer } from 'react-thermometer-component'
 
 function Thermometer({ value, ...props }) {
+    const config = {
+        value,
+        max: 100,
+        steps: 3,
+        format: '°C',
+        theme: 'light'
+    }
+
     return (
         <>
-            <Ther
-                theme="light"
-                value={value}
-                max="100"
-                steps="3"
-                format="°C"
-            />
+            <CreateThermometer {...config}/>
         </>
     )
 }
