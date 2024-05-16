@@ -24,7 +24,7 @@ function Welcome({ data, ...props }) {
                 </p>
                 <div className='mb-4'>
                     <div>
-                        Suhu Rangan: <span className='text-blue-500'>{`${data.suhu_ruangan}°C`}</span>
+                        Suhu Ruangan: <span className='text-blue-500'>{`${data.suhu_ruangan}°C`}</span>
                     </div>
                     <div>
                         Kualitas Oksigen: {`${data.kualitas_oksigen}%`}
