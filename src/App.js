@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Battery from './components/Battery';
-import Gauge from './components/Gauge';
-import Card from './components/Card';
-import Thermometer from './components/Thermometer';
-import Tank from './components/Tank';
-import ArduinoSwitcher from './components/ArduinoSwitcher';
-import Welcome from './components/Welcome';
+import Battery from './components/Battery'
+import Gauge from './components/Gauge'
+import Card from './components/Card'
+import Thermometer from './components/Thermometer'
+import Tank from './components/Tank'
+import ArduinoSwitcher from './components/ArduinoSwitcher'
+import Welcome from './components/Welcome'
 
 function App(props) {
     const [data, setData] = useState({...{
@@ -47,4 +47,4 @@ function App(props) {
     );
 }
 
-export default App;
+export default App
