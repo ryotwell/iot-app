@@ -11,6 +11,11 @@ function Welcome({ data, setData, ...props }) {
             arduino_battery: {
                 isCharging: randomBoolean(),
                 value: randomIntegerInRange(0, 100)
+            },
+            verticalbar: {
+                labels: data.verticalbar.labels,
+                data1: data.verticalbar.labels.map(() => randomIntegerInRange(0, 500)),
+                data2: data.verticalbar.labels.map(() => randomIntegerInRange(0, 200))
             }
         }})
     }

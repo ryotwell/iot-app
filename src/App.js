@@ -6,6 +6,9 @@ import Thermometer from './components/Thermometer'
 import Tank from './components/Tank'
 import ArduinoSwitcher from './components/ArduinoSwitcher'
 import Welcome from './components/Welcome'
+import Verticalbar from './components/Verticalbar'
+
+export const verticalBarLabels = ['November', 'Desember', 'Januari', 'Februari', 'Maret', 'April', 'Mei']
 
 function App(props) {
     const [data, setData] = useState({...{
@@ -16,6 +19,11 @@ function App(props) {
         arduino_battery: {
             value: 71,
             isCharging: false,
+        },
+        verticalbar: {
+            labels: verticalBarLabels,
+            data1: [ 787, 441, 899, 891, 323, 256, 549 ],
+            data2: [ 187, 141, 189, 145, 201, 321, 167 ],
         }
     }})
 
@@ -26,6 +34,9 @@ function App(props) {
 
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
                     <Welcome {...{ data, setData }} />
+                    
+                    <Verticalbar {...data.verticalbar} />
+
                     <Card {...{ title: 'Kualitas Oksigen' }}>
                         <Gauge {...{ value: data.kualitas_oksigen }} />
                     </Card>
@@ -42,6 +53,10 @@ function App(props) {
                         <ArduinoSwitcher {...{ data, setData }} />
                     </Card>
                 </div>
+            </div>
+
+            <div className='text-sm py-6 text-center text-slate-600/60'>
+                { 'Buid with ❤️ by @ryotwell' }
             </div>
         </>
     );
