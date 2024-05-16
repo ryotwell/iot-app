@@ -30,7 +30,7 @@ function Gauge({ value, ...props }) {
                 }}
             />
         </>
-    );
+    )
 }
 
-export default Gauge;
+export default Gauge

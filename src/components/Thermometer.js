@@ -11,7 +11,7 @@ function Thermometer({ value, ...props }) {
                 format="°C"
             />
         </>
-    );
+    )
 }
 
-export default Thermometer;
+export default Thermometer

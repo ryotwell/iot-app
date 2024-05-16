@@ -10,7 +10,7 @@ function Card({ title, children, className = '', center = true, ...props }) {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default Card;
+export default Card

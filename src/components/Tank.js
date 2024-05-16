@@ -59,4 +59,4 @@ function Tank({ value, ...props }) {
     )
 }
 
-export default Tank;
+export default Tank

@@ -40,7 +40,7 @@ function Welcome({ data, setData, ...props }) {
                 </button>
             </Card>
         </>
-    );
+    )
 }
 
-export default Welcome;
+export default Welcome

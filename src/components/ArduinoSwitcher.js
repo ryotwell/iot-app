@@ -9,7 +9,7 @@ function ArduinoSwitcher({ data, setData, ...props }) {
                 {data.arduino_swicth ? 'on' : 'off'}
             </button>
         </>
-    );
+    )
 }
 
-export default ArduinoSwitcher;
+export default ArduinoSwitcher

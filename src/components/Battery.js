@@ -32,7 +32,7 @@ function Battery({ value, isCharging = false, ...props }) {
                 </defs>
             </BatteryGauge>
         </>
-    );
+    )
 }
 
-export default Battery;
+export default Battery
